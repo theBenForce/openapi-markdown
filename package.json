@@ -1,7 +1,7 @@
 {
-  "name": "swagger-markdown",
+  "name": "openapi-markdown",
   "version": "1.2.0",
-  "description": "Create markdown API documentation from swagger file",
+  "description": "Create markdown API documentation from swagger/openapi files",
   "main": "index.js",
   "scripts": {
     "test": "npm run test:app && npm run test:lint",
@@ -9,6 +9,7 @@
     "test:watch": "mocha --watch \"tests/**/*.spec.js\"",
     "test:lint": "eslint .",
     "build": "babel app --out-dir bin",
+    "prepare": "npm run build",
     "prepublish": "npm run build",
     "commit": "git-cz",
     "semantic-release": "semantic-release"
