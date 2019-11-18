@@ -1,6 +1,6 @@
 # openapi-markdown
 
-[![npm][npm-image]][npm-url]
+[![npm][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 CLI script to turn swagger/OpenAPI yaml into markdown files.
 Primarily supports swagger 2.0, with some OpenAPI 3.0 features.
@@ -55,3 +55,5 @@ You can also use it as a npm script in your package.json:
 
 [npm-url]: https://www.npmjs.com/package/openapi-markdown
 [npm-image]: https://img.shields.io/npm/v/openapi-markdown.svg
+[travis-url]: https://travis-ci.org/theBenForce/openapi-markdown
+[travis-image]: https://travis-ci.org/theBenForce/openapi-markdown.svg?branch=master
