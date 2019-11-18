@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/theBenForce/openapi-markdown/compare/v1.2.2...v1.2.3) (2019-11-18)
+
+
+### Bug Fixes
+
+* update bin name ([3393663](https://github.com/theBenForce/openapi-markdown/commit/3393663af5d69f33dacfa305ca685308069b95e1))
+
 ## [1.2.2](https://github.com/theBenForce/openapi-markdown/compare/v1.2.1...v1.2.2) (2019-11-18)
 
 

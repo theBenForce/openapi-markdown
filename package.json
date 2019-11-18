@@ -1,6 +1,6 @@
 {
   "name": "openapi-markdown",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Create markdown API documentation from swagger/openapi files",
   "main": "index.js",
   "scripts": {
