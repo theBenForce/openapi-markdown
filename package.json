@@ -69,19 +69,19 @@
     "markdown"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^8.0.0",
+    "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.0.0",
     "@semantic-release/changelog": "^3.0.2",
     "@semantic-release/commit-analyzer": "^6.1.0",
     "@semantic-release/git": "^7.0.8",
     "@semantic-release/github": "^5.2.10",
-    "@semantic-release/npm": "^5.1.9",
+    "@semantic-release/npm": "^5.1.10",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
-    "commitizen": "^3.1.1",
+    "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "13.1.0",
@@ -89,7 +89,7 @@
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
     "mocha": "^6.1.4",
-    "semantic-release": "^15.13.14"
+    "semantic-release": "^15.13.24"
   },
   "dependencies": {
     "argparse": "^1.0.10",
