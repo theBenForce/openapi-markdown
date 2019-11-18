@@ -15,7 +15,7 @@
     "semantic-release": "semantic-release"
   },
   "bin": {
-    "swagger-markdown": "bin/index.js"
+    "openapi-markdown": "bin/index.js"
   },
   "config": {
     "commitizen": {
