@@ -51,14 +51,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/syroegkin/swagger-markdown.git"
+    "url": "https://github.com/theBenForce/openapi-markdown.git"
   },
   "author": "Sergii Skorokhodov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/syroegkin/swagger-markdown/issues"
+    "url": "https://github.com/theBenForce/openapi-markdown/issues"
   },
-  "homepage": "https://github.com/syroegkin/swagger-markdown#readme",
+  "homepage": "https://github.com/theBenForce/openapi-markdown#readme",
   "babel": {
     "presets": [
       "env"
