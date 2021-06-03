@@ -24,6 +24,20 @@ const resolver = {
  * @return {String}
  */
 const dataTypeResolver = schema => {
+  if (schema.getMinimum() || schema.getMaximum()) {
+    const minimum = schema.getMinimum();
+    const maximum = schema.getMaximum();
+    schema.setMinimum(undefined);
+    schema.setMaximum(undefined);
+    const resolvedDataType = dataTypeResolver(schema);
+    if (minimum && maximum) {
+      return `${maximum} >= ${resolvedDataType} >= ${minimum}`;
+    } else if (minimum) {
+      return `${resolvedDataType} >= ${minimum}`;
+    } else if (maximum) {
+      return `${resolvedDataType} <= ${maximum}`;
+    }
+  }
   if (schema.getAllOf()) {
     return schema.getAllOf()
       .map(subSchema => dataTypeResolver(subSchema))
