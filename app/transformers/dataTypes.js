@@ -50,6 +50,15 @@ const dataTypeResolver = schema => {
     const subType = dataTypeResolver(schema.getItems());
     return `[ ${subType} ]`;
   }
+  if (schema.getType() === 'integer' && (schema.getMinimum() || schema.getMaximum())) {
+    if (schema.getMinimum() && schema.getMaximum()) {
+      return `${schema.getMaximum()} >= integer >= ${schema.getMinimum()}`;
+    } else if (schema.getMaximum()) {
+      return `integer <= ${schema.getMaximum()}`
+    } else if (schema.getMinimum()) {
+      return `integer >= ${schema.getMinimum()}`
+    }
+  }
   if (schema.getType()) {
     return schema.getType();
   }

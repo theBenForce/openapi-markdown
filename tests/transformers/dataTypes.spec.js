@@ -12,6 +12,9 @@ const fixture = [
   // Standard usecases
   [new Schema({ type: 'integer', format: 'int32' }), 'integer'],
   [new Schema({ type: 'integer' }), 'integer'],
+  [new Schema({ type: 'integer', minimum: 100}), 'integer >= 100'],
+  [new Schema({ type: 'integer', maximum: 100}), 'integer <= 100'],
+  [new Schema({ type: 'integer', minimum: 100, maximum: 1000}), '1000 <= integer <= 100'],
   [new Schema({ type: 'integer', format: 'int64' }), 'long'],
   [new Schema({ type: 'number', format: 'float' }), 'float'],
   [new Schema({ type: 'number', format: 'double' }), 'double'],

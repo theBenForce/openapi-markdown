@@ -21,6 +21,12 @@ class Schema {
       if ('allOf' in schema) {
         this.setAllOf(schema.allOf);
       }
+      if ('minimum' in schema) {
+        this.setMinimum(schema.minimum);
+      }
+      if ('maximum' in schema) {
+        this.setMaximum(schema.minimum);
+      }
     }
   }
 
@@ -65,6 +71,22 @@ class Schema {
   }
 
   /**
+   * @param {Integer} minimum
+   */
+  setMinimum(minimum) {
+    this.minimum = minimum;
+    return this;
+  }
+
+  /**
+   * @param {Integer} maximum
+   */
+  setMaximum(maximum) {
+    this.maximum = maximum;
+    return this;
+  }
+
+  /**
    * @return {String}
    */
   getType() {
@@ -97,6 +119,20 @@ class Schema {
    */
   getAllOf() {
     return this.allOf;
+  }
+
+  /**
+   * @param {Integer} minimum
+   */
+  getMinimum() {
+    return this.minimum;
+  }
+
+  /**
+   * @param {Integer} maximum
+   */
+  getMaximum() {
+    return this.maximum;
   }
 }
 
