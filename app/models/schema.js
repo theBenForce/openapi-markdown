@@ -71,15 +71,16 @@ class Schema {
   }
 
   /**
-   * @param {Integer} minimum
+   * @param {Number} minimum
    */
   setMinimum(minimum) {
     this.minimum = minimum;
     return this;
   }
 
+
   /**
-   * @param {Integer} maximum
+   * @param {Number} maximum
    */
   setMaximum(maximum) {
     this.maximum = maximum;
@@ -122,14 +123,14 @@ class Schema {
   }
 
   /**
-   * @param {Integer} minimum
+   * @return {Number}
    */
   getMinimum() {
     return this.minimum;
   }
 
   /**
-   * @param {Integer} maximum
+   * @return {Number}
    */
   getMaximum() {
     return this.maximum;

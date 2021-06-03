@@ -24,6 +24,20 @@ const resolver = {
  * @return {String}
  */
 const dataTypeResolver = schema => {
+  if (schema.getMinimum() || schema.getMaximum()) {
+    const minimum = schema.getMinimum();
+    const maximum = schema.getMaximum();
+    schema.setMinimum(undefined);
+    schema.setMaximum(undefined);
+    const resolvedDataType = dataTypeResolver(schema);
+    if (minimum && maximum) {
+      return `${maximum} >= ${resolvedDataType} >= ${minimum}`;
+    } else if (minimum) {
+      return `${resolvedDataType} >= ${minimum}`;
+    } else if (maximum) {
+      return `${resolvedDataType} <= ${maximum}`;
+    }
+  }
   if (schema.getAllOf()) {
     return schema.getAllOf()
       .map(subSchema => dataTypeResolver(subSchema))
@@ -49,15 +63,6 @@ const dataTypeResolver = schema => {
   if (schema.getType() === 'array') {
     const subType = dataTypeResolver(schema.getItems());
     return `[ ${subType} ]`;
-  }
-  if (schema.getType() === 'integer' && (schema.getMinimum() || schema.getMaximum())) {
-    if (schema.getMinimum() && schema.getMaximum()) {
-      return `${schema.getMaximum()} >= integer >= ${schema.getMinimum()}`;
-    } else if (schema.getMaximum()) {
-      return `integer <= ${schema.getMaximum()}`
-    } else if (schema.getMinimum()) {
-      return `integer >= ${schema.getMinimum()}`
-    }
   }
   if (schema.getType()) {
     return schema.getType();
